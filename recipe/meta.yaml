@@ -18,6 +18,8 @@ requirements:
   host:
     - python
     - pip
+    - hatchling
+    - hatch-regex-commit
   run:
     - python
   run_constrained:
