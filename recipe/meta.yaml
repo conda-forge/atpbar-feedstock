@@ -6,28 +6,30 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: e1eb81a1e28231c1b9cb9a4335fdfc2b7feaf6af3a6435bc5d5be366827a8a39
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
-    - python
+    - python {{ python_min }}
     - pip
     - hatchling
     - hatch-regex-commit
   run:
-    - python
+    - python >={{ python_min }}
   run_constrained:
     - jupyter
     - ipywidgets
     - widgetsnbextension
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - atpbar
 
