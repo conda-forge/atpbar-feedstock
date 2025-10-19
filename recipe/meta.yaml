@@ -1,13 +1,13 @@
 {% set name = "atpbar" %}
-{% set version = "2.0.5" %}
+{% set version = "2.0.6" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: e1eb81a1e28231c1b9cb9a4335fdfc2b7feaf6af3a6435bc5d5be366827a8a39
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 19dbdcadb63c97160d76859433650ce46878d486bcb626239c90daa5684ca3b3
 
 build:
   noarch: python
