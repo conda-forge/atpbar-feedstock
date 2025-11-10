@@ -8,26 +8,27 @@ package:
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 26051d9695a5c4576af8a5713c8976ddb91d458c8f4eff6f24fe78b7b7d9fa5f
-
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
-    - python
+    - python {{ python_min }}
     - pip
     - hatchling
     - hatch-regex-commit
   run:
-    - python
+    - python >={{ python_min }}
   run_constrained:
     - jupyter
     - ipywidgets
     - widgetsnbextension
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - atpbar
 
