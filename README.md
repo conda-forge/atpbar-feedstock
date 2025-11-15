@@ -5,7 +5,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/atpbar-feedstoc
 
 Home: https://github.com/alphatwirl/atpbar
 
-Package license: BSD-3-Clause
+Package license: MIT
 
 Summary: Progress bars for threading and multiprocessing tasks on terminal and Jupyter Notebook
 
