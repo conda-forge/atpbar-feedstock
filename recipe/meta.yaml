@@ -34,8 +34,8 @@ test:
 
 about:
   home: https://github.com/alphatwirl/atpbar
-  license: BSD-3-Clause
-  license_family: BSD
+  license: MIT
+  license_family: MIT
   license_file: LICENSE
   summary: Progress bars for threading and multiprocessing tasks on terminal and Jupyter Notebook
   description: |
